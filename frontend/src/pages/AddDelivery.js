@@ -10,7 +10,7 @@ const AddDelivery = () => {
   const handleSubmit = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:5000/api/deliveries', form, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.post('https://gigtruth.onrender.com/api/deliveries', form, { headers: { Authorization: `Bearer ${token}` } });
       const d = res.data.delivery;
       toast.success(`Logged! Real profit: ₹${d.realProfit} | Risk: ${d.riskLevel}`);
       navigate('/dashboard');

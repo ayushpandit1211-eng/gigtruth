@@ -13,8 +13,8 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     const headers = { Authorization: `Bearer ${token}` };
-    axios.get('http://localhost:5000/api/deliveries/summary', { headers }).then(r => setSummary(r.data));
-    axios.get('http://localhost:5000/api/deliveries', { headers }).then(r => setDeliveries(r.data));
+    axios.get('https://gigtruth.onrender.com/api/deliveries/summary', { headers }).then(r => setSummary(r.data));
+    axios.get('https://gigtruth.onrender.com/api/deliveries', { headers }).then(r => setDeliveries(r.data));
   }, []);
 
   const logout = () => { localStorage.clear(); navigate('/login'); };
@@ -22,7 +22,7 @@ const Dashboard = () => {
   const checkWeather = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get(`http://localhost:5000/api/weather/${city}`, { headers: { Authorization: `Bearer ${token}` } });
+      const res = await axios.get(`https://gigtruth.onrender.com/api/weather/${city}`, { headers: { Authorization: `Bearer ${token}` } });
       setWeather(res.data);
     } catch {
       alert('City not found');
