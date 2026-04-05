@@ -13,11 +13,11 @@ const App = () => {
     <Router>
       <Toaster position="top-center" />
       <Routes>
-        <Route path="/" element={token ? <Navigate to="/dashboard" /> : <Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/dashboard" element={token ? <Dashboard /> : <Navigate to="/login" />} />
-        <Route path="/add-delivery" element={token ? <AddDelivery /> : <Navigate to="/login" />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/add-delivery" element={<AddDelivery />} />
       </Routes>
     </Router>
   );
