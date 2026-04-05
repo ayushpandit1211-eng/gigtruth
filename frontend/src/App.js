@@ -5,9 +5,10 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import AddDelivery from './pages/AddDelivery';
+import RiderStory from './pages/RiderStory';
 
 const App = () => {
-  const token = localStorage.getItem('token');
+  
 
   return (
     <Router>
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-delivery" element={<AddDelivery />} />
+        <Route path="/riders" element={<RiderStory />} />
       </Routes>
     </Router>
   );

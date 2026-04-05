@@ -76,6 +76,7 @@ const Dashboard = () => {
       )}
 
       <button style={styles.emergencyBtn} onClick={sendEmergency}>🆘 EMERGENCY</button>
+      <Link to="/riders" style={{...styles.addBtn, backgroundColor: '#1a1a2e', marginBottom: '12px'}}>👥 Meet the Riders</Link>
       <Link to="/add-delivery" style={styles.addBtn}>+ Log New Delivery</Link>
 
       <h3 style={styles.historyTitle}>📋 Delivery History</h3>
