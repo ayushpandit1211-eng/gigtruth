@@ -76,6 +76,7 @@ const Dashboard = () => {
       )}
 
       <button style={styles.emergencyBtn} onClick={sendEmergency}>🆘 EMERGENCY</button>
+      <Link to="/welfare" style={{...styles.addBtn, backgroundColor: '#cc0000', marginBottom: '12px'}}>🏆 Company Welfare Score</Link>
       <Link to="/riders" style={{...styles.addBtn, backgroundColor: '#1a1a2e', marginBottom: '12px'}}>👥 Meet the Riders</Link>
       <Link to="/add-delivery" style={styles.addBtn}>+ Log New Delivery</Link>
 

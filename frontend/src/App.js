@@ -6,6 +6,7 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import AddDelivery from './pages/AddDelivery';
 import RiderStory from './pages/RiderStory';
+import WelfareScore from './pages/WelfareScore';
 
 const App = () => {
   
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-delivery" element={<AddDelivery />} />
         <Route path="/riders" element={<RiderStory />} />
+        <Route path="/welfare" element={<WelfareScore />} />
       </Routes>
     </Router>
   );
